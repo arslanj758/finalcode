@@ -1,0 +1,34 @@
+source 'https://rubygems.org'
+
+gem 'rails', "~> 5.1"
+gem 'devise'
+gem 'haml'
+
+gem 'mongoid'
+gem 'mongoid-paperclip'
+gem 'aws-sdk', '~> 2'
+gem 'kaminari'
+gem 'kaminari-mongoid'
+gem 'activeadmin'
+gem 'cancancan'
+gem 'ish_models',   :github => 'piousbox/ish_models',   :branch => :master
+gem 'ish_manager',  :github => 'piousbox/ish_manager',  :branch => :master
+gem 'rails-controller-testing'
+
+## for travis
+gem 'i18n', '0.9.1'
+gem 'minitest', '5.10.2'
+gem 'tzinfo', '1.2.4'
+gem 'activesupport', '5.1.4'
+gem 'rails-controller-testing'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+gem 'rake'
+
+group :test, :development do
+	#gem "factory_bot_rails"
+	gem 'rspec-rails'
+	# gem 'mocha', '~> 1.11', '>= 1.11.2'
+  gem 'byebug'
+end
