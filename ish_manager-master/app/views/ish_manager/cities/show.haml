@@ -1,0 +1,20 @@
+
+-#
+-# ish_manager / cities / show
+-#
+  
+= render 'header', :city => @city
+= render 'ish_manager/features/index',  :features => @city.features,   :city => @city
+= render 'ish_manager/newsitems/index', :newsitems => @city.newsitems, :city => @city
+
+.row
+  .col-sm-6= render 'ish_manager/reports/index', :reports => @city.reports
+  .col-sm-6
+    %h5 Galleries
+    = render 'ish_manager/galleries/index', :galleries => @city.galleries
+.row
+  .col-sm-6= render 'ish_manager/videos/index', :videos => @city.videos
+  .col-sm-6
+    = render 'ish_manager/users/index', :users => @city.current_users
+    = render 'ish_manager/events/index', :events => @city.events    
+    = render 'ish_manager/venues/index', :venues => @city.venues

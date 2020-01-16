@@ -1,0 +1,35 @@
+
+-# ish_manager / reports / index
+
+- if @site
+  = render 'ish_manager/sites/header', :site => @site
+  
+.row
+  .large-12.columns
+    %h3
+      Reports (#{@reports.length})
+      = link_to image_new, new_report_path
+      
+    = paginate @reports, :param_name => :reports_page, :views_prefix => 'ish_manager'
+    
+    - @reports.each do |report|
+      .card
+        .card-content
+          = link_to '[~]', edit_report_path( report )
+          .float-left= button_to '[x]', report_path( report ), :method => :delete, :data => { :confirm => 'Are you sure?' }
+          - if report.is_public
+            %i.material-icons visibility
+          - else
+            %i.material-icons visibility off
+          = link_to report.name, report_path( report )
+          %br
+          .gray
+            - if report.site
+              Site #{report.site.domain}/#{report.site.lang}
+              %br
+            = report.created_at
+          - if report.photo
+            = image_tag report.photo.photo.url :thumb
+          
+    = paginate @reports, :param_name => :reports_page, :views_prefix => 'ish_manager'
+    

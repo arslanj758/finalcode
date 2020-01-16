@@ -1,0 +1,51 @@
+
+
+# development:
+#   clients:
+#     default:
+#       database: ish_development
+#       hosts:
+#         - 127.0.0.1
+
+# test:
+#   clients:
+#     default:
+#       database: ish_test
+#       hosts:
+#         - 127.0.0.1
+
+production:
+  clients:
+    default:
+      database: ish_manager_production
+      hosts:
+        - portal-ssl692-36.groovy-mongodb-70.3265821018.composedb.com:31682
+        - portal-ssl2796-4.groovy-mongodb-70.3265821018.composedb.com:31682
+      options:
+        user: arslan
+        password: admin123
+        auth_source: admin
+        ssl: true
+development:
+  clients:
+    default:
+      database: ish_manager_development
+      hosts:
+        - 127.0.0.1
+      options:
+        user: arslan
+        # The password of the user for authentication.
+        password: admin123
+        auth_source: admin
+
+  options:
+test:
+  clients:
+    default:
+      database: ish_manager_test
+      hosts:
+        - 127.0.0.1
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1

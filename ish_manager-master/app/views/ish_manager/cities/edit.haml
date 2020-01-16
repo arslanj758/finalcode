@@ -1,0 +1,11 @@
+
+%h1.center= link_to @city.name, city_path( @city )
+= render 'form', :url => city_path
+%hr
+
+.row
+  .small-12.columns
+    = render 'ish_manager/features/index', :features => @city.features, :city => @city
+%hr
+= render 'ish_manager/newsitems/index', :newsitems => @city.newsitems, :city => @city
+

@@ -1,0 +1,201 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require ish_manager/bootstrap
+ *= require_self
+ *= require ish_manager/tags
+ */
+
+
+/**
+ * utils
+ */
+.bg-white {
+  background: url('/assets/bg/confectionary.png');
+  padding-bottom: 1em;
+}
+
+body {
+  background: #dedede;
+}
+
+.center {
+  text-align: center;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.notice {
+  border: 1px solid green;
+  padding: .8em;
+}
+.alert {
+  boroder: 1px solid yellow;
+  padding: .8em;
+}
+
+hr {
+  background: red;
+  height: 1px !important;
+}
+
+.thumb {
+  background: dedede;
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}  
+.large-photos img {
+  width: 100%;
+}
+
+.float-left {
+  float: left;
+  padding-right: 1em;
+}
+.float-right {
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+.blue {
+  background: #5bc0de;
+  color: white;
+}
+
+.panel-content {
+  padding: .5em;
+}
+
+.collapse-expand {
+  cursor: pointer;
+}
+
+.youtube_img {
+  width: 100px;
+}
+
+.inline {
+  display: inline;
+}
+ul.inline li {
+  display: inline;
+}
+
+.border-red,
+.red-border {
+  border: 1px solid red;
+  padding: 1em;
+}
+
+.addToggle + * {
+  display: none;
+}
+
+.menu-secondary {}
+.menu-secondary li {
+  display: inline;
+}
+.menu-secondary li a {
+  padding: 1rem;
+  background: white;
+}
+
+/**
+ * manager... 
+ */
+
+.manager--main-header {
+  background: url('/assets/bg/weather.png');
+}
+.manager--main-header hr {
+  margin-top: 0;
+}
+
+.manager-galleries--index .mini {
+  float: left;
+}
+
+.manager-sites--title {
+  padding: 1em;
+  background: url('/assets/bg/weather.png');
+  border-bottom: 1px solid red;
+}
+
+/**
+ * pagination
+ */
+
+/* nav.pagination {
+  padding-left: 1em;
+  background: transparent;
+}
+nav.pagination
+*/
+
+
+/**
+ * reports
+ */
+.descr,
+.description {
+  border: 1px solid red;
+  padding: 1em;
+  font-size: 1.6em;
+}
+
+
+/**
+ * ally, stock watches
+ */
+.price {
+  /* margin-left: 1em; */
+}
+.descriptive {
+  line-height: 2em;
+}
+.price::before {
+  content: "$";
+  position: absolute;
+  top: 1em;
+  left: 0;
+}
+table.stock_watches td {
+  border-right: 1px solid cyan;
+  padding: 15px;
+}
+table.stock_watches .trashy {
+  background: #cecece;
+}
+
+.stock-option {
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
+  box-shadow: 2px 2px 5px grey;
+  margin: 5px;
+}
+.stock-option:hover {
+  box-shadow: 3px 3px 5px grey;
+}
+
+/*
+ * newsitems
+ */
+.newsitems--item {
+  border: 1px solid green;
+  padding: 5px;
+}
